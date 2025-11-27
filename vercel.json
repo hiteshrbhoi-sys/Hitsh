@@ -14,24 +14,14 @@
     },
     {
       "src": "/site.webmanifest",
-      "headers": { "Content-Type": "application/manifest+json" },
+      "headers": {
+        "Content-Type": "application/manifest+json"
+      },
       "dest": "/site.webmanifest"
     },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
-{
-  "src": "/site.webmanifest",
-  "dest": "/site.webmanifest",
-  "headers": {
-    "Content-Type": "application/manifest+json"
-  }
-},
-{
-  "src": "/sw.js",
-  "dest": "/sw.js",
-  "headers": {
-    "Service-Worker-Allowed": "/"
-  }
-}
-
