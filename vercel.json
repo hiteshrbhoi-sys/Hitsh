@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/sw.js",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Service-Worker-Allowed": "/"
+      },
+      "dest": "/sw.js"
+    },
+    {
+      "src": "/site.webmanifest",
+      "headers": { "Content-Type": "application/manifest+json" },
+      "dest": "/site.webmanifest"
+    },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
+{
+  "src": "/site.webmanifest",
+  "dest": "/site.webmanifest",
+  "headers": {
+    "Content-Type": "application/manifest+json"
+  }
+},
+{
+  "src": "/sw.js",
+  "dest": "/sw.js",
+  "headers": {
+    "Service-Worker-Allowed": "/"
+  }
+}
+
